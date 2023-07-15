@@ -28,9 +28,9 @@ export const getStaticProps=({params})=>{
 
 export const getStaticPaths=()=>{
     const categories=['react','laravel'];
-    const paths=categories.map((category)=>{
+    const paths=categories.map((category)=>({
         params:{category}
-    })
+    }))
     return {
         paths,
         fallback: false
